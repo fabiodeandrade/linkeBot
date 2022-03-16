@@ -1,5 +1,6 @@
 # linkeBot🤖
 ![cover](./cover.png)
+![gif](./gif.gif)
 
 ![](https://img.shields.io/badge/linkeBot-Node-green) ![](https://img.shields.io/badge/Scrapper-Pupperteer-blue)
 
