@@ -24,7 +24,7 @@ E para corrigir isso foi criado um filtro nos elementos retornado que tivessem p
 ### 🔎 Como utilizar
 
 - `git clone` no link do repositório
-- Instalado em sua maquína você precisará instalar as dependencias do projeto.
+- Instalado em sua máquina você precisará instalar as dependencias do projeto.
 - `npm install`
 - Execute o arquivo `main.js` direto no node ou no terminal.
 - Após a primeira execução, abra o arquivo `index.html`
