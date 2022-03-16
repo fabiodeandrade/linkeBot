@@ -11,6 +11,30 @@ body {
     gap: 1rem;
 }
 
+.normal {
+  background-color: #0E76A8;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 3rem;
+  border-radius: 20px;
+  border-style: none;
+  box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.466);
+  font-size: 1.5rem;
+  transition: all ease .6s;
+  
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #08415c;
+  transform: scale(1.2)
+}
+
 
 .container {
   display: flex;

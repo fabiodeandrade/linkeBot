@@ -7,8 +7,9 @@
     <title>LinkeBot 🤖</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="normal">
     <img src="./LinkedIn_Logo.svg.png" class="logo" />
+    <button class="darkmode">🌙</button>
     <div class="container"></div>
 
     <footer>
@@ -21,12 +22,27 @@
     </footer>
 
     <script>
+      const darkmode = document.querySelector('.darkmode');
+      const darked = document.body.classList
+      darkmode.addEventListener('click', () => {
+        if (darked.contains('normal')) {
+          document.body.style.backgroundColor = 'black'
+          darked.remove('normal')
+        } else {
+          document.body.style.backgroundColor = '#0E76A8'
+          darked.add('normal')
+        }
+      })
+      
+
+      
       console.log("Buscando vagas...");
 
       async function showPics() {
         const response = await fetch("./data.json");
 
         const data = await response.json();
+        
 
         const htmlList = await data.filter((value) => {
           if (
