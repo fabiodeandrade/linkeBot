@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkeBot 🤖</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="./LinkedIn_Logo.svg.png" class="logo" />
+    <div class="container"></div>
+
+    <footer>
+      <p>
+        Desenvolvido por
+        <a href="https://www.linkedin.com/in/fabiodeandrad/" target="blanck"
+          >Fábio de Andrade</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      console.log("Buscando vagas...");
+
+      async function showPics() {
+        const response = await fetch("./data.json");
+
+        const data = await response.json();
+
+        const htmlList = await data.filter((value) => {
+          if (
+            value.innerText.includes("jr") ||
+            value.innerText.includes("JR") ||
+            value.innerText.includes("desenvolvedor") ||
+            value.innerText.includes("Frontend") ||
+            value.innerText.includes("Jr") ||
+            value.innerText.includes("front-end")
+          ) {
+            return true;
+          }
+        });
+
+        const filteredList = await htmlList
+          .map(({ href, innerText }) => {
+            return `<div class='result'>
+            <a href='${href}' target='_blanck'><h3>${innerText}</h3></a>
+          </div>`;
+          })
+          .join("");
+
+        document.querySelector(".container").innerHTML = filteredList;
+        await console.log('%c Vagas atualizadas ','color:hsl(240, 100%, 90%);background-color: #0E76A8;');
+      }
+
+      showPics();
+    </script>
+  </body>
+</html>
