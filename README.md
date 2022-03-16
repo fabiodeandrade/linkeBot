@@ -1,39 +1,39 @@
-# linkeBot🤖📈💲
+# linkeBot🤖
 ![cover](./cover.png)
 
-<br />
+![](https://img.shields.io/badge/linkeBot-Node-green) ![](https://img.shields.io/badge/Scrapper-Pupperteer-blue)
 
-<br />
- 
 ### 🎛️ Dependencias
  
 - [Puppeteer](https://pptr.dev/) - Scrapper
 
  
 ### 🎯 Objetivo
-A partir de estudos em web scraping com Javascript surgiu a ideia de ajudar um amigo que sempre precisa da cotação do BitCoin para efetuar Day Trades.
+Estudando web scrapping surgiu a ideia de criar um bot que faça uma busca por vagas de determinado ramo no LinkedIn.
  
  
 ### ⌨️ Como foi feito?
 
-O core de tudo foi a utilização da lib `Puppeteer`, que serve para simular o controle a partir dos protocolos inseridos no DevTools em navegadores baseados no Chromium.
+A ideia inicial era varrer uma URL especifica e capturar todos os elementos HTML que estivessem uma condição. Essa condição foi que o bot retornasse elementos que fossem `<a>` que estivessem dentro de `<div>`, porém essa primeira busca trouxe muitos elementos que não faziam sentido como:
+- Areas de login
+- Botões de navegação
 
-O BitBot faz a leitura de uma URL de busca no Google e retorna o valor inserido no elemento renderizado com a cotação do momento.
-
-Eu inseri a função dentro de um `setInverval()` para que ela pudesse atualizar a cada segundo. Assim como os `console.log()` com as informações exibidas para no usuário no terminal.
+E para corrigir isso foi criado um filtro nos elementos retornado que tivessem palavras específicas como *'dev', 'front-end'* e etc.
 
 ### 🔎 Como utilizar
 
 - `git clone` no link do repositório
 - Instalado em sua maquína você precisará instalar as dependencias do projeto.
 - `npm install`
-- Basta executar o arquivo `bitSearch.js` direto no node ou no terminal
+- Execute o arquivo `main.js` direto no node ou no terminal.
+- Após a primeira execução, abra o arquivo `index.html`
 
 
  
 ### 🔧 Próximos passos
  
-- Adicionar elemento de questionário para realizar o scraping de outras moedas
+- Adicionar paginação
+- Mais condições de filtros
 
 
 ### 🎨 Autor

@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-let counter = 0;
+let counter = 1;
 console.log('LinkeBot Iniciado, abra o arquivo Index.HTML 🤖🔎')
 
 async function pupper() {
