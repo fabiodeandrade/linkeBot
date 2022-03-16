@@ -21,7 +21,7 @@ async function pupper() {
   }); 
 
 
-  fs.writeFile('data.json', JSON.stringify(list, null, 2), err => {
+  fs.writeFile('./back/data.json', JSON.stringify(list, null, 2), err => {
       if (err) throw new Error('Alguma coisa deu errada')
 
       console.log(`Vagas atualizadas 👌🏻${counter ++} vezes`);

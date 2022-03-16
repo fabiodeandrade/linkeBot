@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="normal">
-    <img src="./LinkedIn_Logo.svg.png" class="logo" />
-    <button class="darkmode">🌙</button>
+    <img src="../assets/LinkedIn_Logo.svg.png" class="logo" />
+    <button class="darkmode">🌖</button>
     <div class="container"></div>
 
     <footer>
@@ -22,6 +22,7 @@
     </footer>
 
     <script>
+     
       const darkmode = document.querySelector('.darkmode');
       const darked = document.body.classList
       darkmode.addEventListener('click', () => {
@@ -39,7 +40,7 @@
       console.log("Buscando vagas...");
 
       async function showPics() {
-        const response = await fetch("./data.json");
+        const response = await fetch("../back/data.json");
 
         const data = await response.json();
         
@@ -71,5 +72,6 @@
 
       showPics();
     </script>
+    
   </body>
 </html>
