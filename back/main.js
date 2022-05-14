@@ -12,7 +12,7 @@ async function pupper() {
   await console.log("Atualizando vagas...🔎")
 
   const list = await page.evaluate(() => {
-      const nodeList = document.querySelectorAll('div a');
+      const nodeList = document.querySelectorAll('a[data-tracking-control-name="public_jobs_jserp-result_search-card"]');
       const textArray = [...nodeList]
       const list = textArray.map( ({href, innerText}) => ({
           href, innerText
