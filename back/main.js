@@ -7,7 +7,7 @@ console.log('LinkeBot Iniciado, abra o arquivo Index.HTML 🤖🔎')
 async function pupper(search, additionalPages) {
   
   await console.log("Atualizando vagas...🔎")
-  const browser = await puppeteer.launch({executablePath:process.env.SCRAPPER_BROWSER});
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(`https://www.linkedin.com/jobs/${search}-jobs-brasil?geoId=106057199&countryRedirected=1&position=1&pageNum=0`);
 
